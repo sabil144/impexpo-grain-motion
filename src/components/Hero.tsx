@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({
   subtitle,
   buttonText = 'Learn More',
   buttonLink = '/',
-  backgroundImage = 'https://images.unsplash.com/photo-1472152083436-a6eede6efad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+  backgroundImage = '/public/lovable-uploads/9bc19ed0-9c98-4718-8b76-92683b4dfa0e.png',
   size = 'md',
 }) => {
   const getHeroHeight = () => {

@@ -44,7 +44,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
       </Link>
       
-      {/* Hover Animation Elements */}
+      {/* Enhanced Hover Animation Elements */}
       <div className={`absolute -bottom-1 left-0 h-1 w-0 ${active ? 'bg-red-500' : 'bg-impexpo-gold'} transition-all duration-300 group-hover:w-full`}></div>
       <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
       <div className="absolute top-0 left-0 w-full h-0 bg-gradient-to-b from-impexpo-gold/5 to-transparent group-hover:h-24 transition-all duration-300"></div>

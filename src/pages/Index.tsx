@@ -20,54 +20,54 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Updated products list
+  // Updated products list with accurate images
   const products = [
     { 
       name: "Canola Seed", 
       description: "High-quality canola seeds for premium oil production",
-      image: "https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/a7fdda62-65c8-4601-b54d-c64e3b3f589a.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Wheat", 
       description: "Premium milling and feed wheat varieties",
-      image: "https://images.unsplash.com/photo-1530272911622-485710a2d805?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/25cfdda8-bfa5-4552-b233-2f8020039cad.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Lentils", 
       description: "Red and green lentils for global markets",
-      image: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/d2f08949-996f-4b43-85f3-0e8b2693df3a.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Barley", 
       description: "Malting and feed barley varieties",
-      image: "https://images.unsplash.com/photo-1559177244-a83e9c37ebb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/4284d08f-9c75-4c7a-a873-ea3692b04484.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Sorghum", 
       description: "High-quality sorghum for food and feed",
-      image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/93ad4197-ad45-4c75-a61d-d94f4df978c7.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Mung Beans", 
       description: "Export-grade mung beans for Asian markets",
-      image: "https://images.unsplash.com/photo-1611071548212-58cc5bec1c15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/09c6fbaa-5671-4012-9e0d-8a741edf228b.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Chickpeas", 
       description: "Desi and Kabuli chickpea varieties",
-      image: "https://images.unsplash.com/photo-1515543904379-3d757afe72e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/b36e882d-4ad4-4c34-a7c2-11ba7c5b9416.png",
       icon: <Wheat size={32} /> 
     },
     { 
       name: "Kaspa Peas", 
       description: "Premium Kaspa field peas for export markets",
-      image: "https://images.unsplash.com/photo-1563114773-84221bd62daa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "public/lovable-uploads/ae9b0d59-c98c-4ab8-9c80-55ff8b9d08ae.png",
       icon: <Wheat size={32} /> 
     }
   ];
@@ -83,7 +83,7 @@ const Index = () => {
           buttonText="Discover Our Services"
           buttonLink="/grains"
           size="lg"
-          backgroundImage="https://images.unsplash.com/photo-1472152083436-a6eede6efad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+          backgroundImage="public/lovable-uploads/c825a626-abd1-4312-b1e1-9470becc97fb.png"
         />
 
         {/* About Section */}
@@ -104,7 +104,7 @@ const Index = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                  src="public/lovable-uploads/1d644d3e-ac38-4634-b470-86b1ecbc993c.png" 
                   alt="Grain Silo" 
                   className="rounded-lg shadow-xl w-full h-auto animate-fade-in"
                   style={{ animationDelay: '0.2s' }} 
