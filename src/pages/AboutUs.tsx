@@ -1,7 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Users, GlobeCheck, Scale, Award, ArrowRight, ChevronRight } from 'lucide-react';
+import { Clock, Users, Globe, Check, Scale, Award, ArrowRight, ChevronRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -65,7 +64,7 @@ const AboutUs = () => {
       description: 'We value long-term partnerships with farmers, processors, and clients built on mutual respect and shared success.' 
     },
     { 
-      icon: <GlobeCheck className="h-8 w-8" />, 
+      icon: <Globe className="h-8 w-8" />, 
       title: 'Sustainability', 
       description: 'We are committed to environmentally responsible practices throughout our global supply chain.' 
     }
@@ -118,7 +117,7 @@ const AboutUs = () => {
                 
                 <div className="flex items-center">
                   <div className="bg-impexpo-gold/10 p-2 rounded-full mr-4">
-                    <GlobeCheck className="h-5 w-5 text-impexpo-gold" />
+                    <Globe className="h-5 w-5 text-impexpo-gold" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">International Reach</h4>
@@ -258,16 +257,13 @@ const AboutUs = () => {
             </div>
 
             <div className="relative">
-              {/* Timeline Line */}
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
               
               <div className="space-y-16">
                 {milestones.map((milestone, index) => (
                   <div key={milestone.year} className={`relative flex items-center justify-between md:justify-normal animate-fade-in ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
-                    {/* Timeline Point */}
                     <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-impexpo-gold border-4 border-white shadow"></div>
                     
-                    {/* Content */}
                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-10' : 'md:pl-10'}`}>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <span className="text-impexpo-gold font-bold">{milestone.year}</span>
@@ -276,7 +272,6 @@ const AboutUs = () => {
                       </div>
                     </div>
                     
-                    {/* Empty space for alignment */}
                     <div className="hidden md:block w-5/12"></div>
                   </div>
                 ))}

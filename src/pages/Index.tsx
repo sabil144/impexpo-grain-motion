@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wheat, GlobeSearch, Users, Building2, TrendingUp, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Wheat, Globe, Search, Users, Building2, TrendingUp, ShieldCheck } from 'lucide-react';
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import Header from '@/components/Header';
@@ -80,7 +80,7 @@ const Index = () => {
               <ServiceCard 
                 title="International Trade" 
                 description="Benefit from our global network to export and import grains efficiently across international markets."
-                icon={<GlobeSearch size={32} />}
+                icon={<Globe size={32} />}
                 link="/international-trade"
                 delay="0.2s"
               />

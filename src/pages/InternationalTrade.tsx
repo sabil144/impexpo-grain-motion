@@ -1,7 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Ship, FileText, ShieldCheck, ArrowRight, Building, GlobeCheck, CircleDollarSign, Truck } from 'lucide-react';
+import { Globe, Ship, FileText, ShieldCheck, ArrowRight, Building, Check, CircleDollarSign, Truck } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -213,7 +212,8 @@ const InternationalTrade = () => {
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                   <div className="flex items-center mb-4">
-                    <GlobeCheck className="h-6 w-6 text-impexpo-gold mr-3" />
+                    <Globe className="h-6 w-6 text-impexpo-gold mr-3" />
+                    <Check className="h-6 w-6 text-impexpo-gold mr-3" />
                     <h3 className="text-xl font-semibold">Key Market Statistics</h3>
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-center">
