@@ -9,6 +9,7 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   link: string;
   delay?: string;
+  active?: boolean;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -16,27 +17,28 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   icon,
   link,
-  delay = '0s'
+  delay = '0s',
+  active = false
 }) => {
   return (
     <div 
-      className="service-card p-6 h-full flex flex-col animate-fade-in relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+      className={`service-card p-6 h-full flex flex-col animate-fade-in relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ${active ? 'border-l-4 border-l-red-500' : ''}`}
       style={{ animationDelay: delay }}
     >
-      <div className="bg-impexpo-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-impexpo-gold group-hover:bg-impexpo-gold group-hover:text-white transition-all duration-300">
+      <div className={`${active ? 'bg-red-500 text-white' : 'bg-impexpo-gold/10 text-impexpo-gold group-hover:bg-impexpo-gold group-hover:text-white'} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 transition-all duration-300`}>
         {icon}
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
       <p className="text-gray-600 mb-6 flex-grow">{description}</p>
       <Link 
         to={link} 
-        className="mt-auto inline-flex items-center text-impexpo-darkblue hover:text-impexpo-gold transition-colors"
+        className={`mt-auto inline-flex items-center ${active ? 'text-red-500 hover:text-red-700' : 'text-impexpo-darkblue hover:text-impexpo-gold'} transition-colors`}
       >
         Learn More <ArrowRight className="ml-2 h-4 w-4" />
       </Link>
       
       {/* Hover Animation Element */}
-      <div className="absolute -bottom-1 left-0 h-1 w-0 bg-impexpo-gold transition-all duration-300 group-hover:w-full"></div>
+      <div className={`absolute -bottom-1 left-0 h-1 w-0 ${active ? 'bg-red-500' : 'bg-impexpo-gold'} transition-all duration-300 group-hover:w-full`}></div>
     </div>
   );
 };

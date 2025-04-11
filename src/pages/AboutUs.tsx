@@ -1,9 +1,11 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Users, Globe, Check, Scale, Award, ArrowRight, ChevronRight } from 'lucide-react';
+import { Clock, Users, Globe, Check, Scale, Award, ArrowRight, ChevronRight, Wheat, Utensils, PawPrint, Ship, Truck, Calendar } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import ServiceCard from '@/components/ServiceCard';
 
 const AboutUs = () => {
   useEffect(() => {
@@ -18,33 +20,6 @@ const AboutUs = () => {
     { year: 2017, title: 'Digital Trading Platform', description: 'Launched our digital grain trading platform, enhancing accessibility for clients.' },
     { year: 2020, title: 'Sustainability Initiative', description: 'Implemented comprehensive sustainability framework across all operations.' },
     { year: 2023, title: 'Global Network Milestone', description: 'Expanded our trading network to over 30 countries worldwide.' }
-  ];
-
-  const teamMembers = [
-    { 
-      name: 'Michael Chen', 
-      position: 'Chief Executive Officer',
-      photo: 'https://randomuser.me/api/portraits/men/32.jpg',
-      bio: 'With over 25 years of experience in agricultural trade, Michael leads Impexpo Group with a vision for sustainable global growth.'
-    },
-    { 
-      name: 'Sarah Johnson', 
-      position: 'Chief Operations Officer',
-      photo: 'https://randomuser.me/api/portraits/women/44.jpg',
-      bio: 'Sarah oversees the day-to-day operations of Impexpo Group, ensuring efficient processes and exceptional service delivery.'
-    },
-    { 
-      name: 'David Patel', 
-      position: 'Head of International Trade',
-      photo: 'https://randomuser.me/api/portraits/men/67.jpg',
-      bio: 'David brings extensive knowledge of global markets and regulatory frameworks to our international trade division.'
-    },
-    { 
-      name: 'Emma Rodriguez', 
-      position: 'Finance Director',
-      photo: 'https://randomuser.me/api/portraits/women/28.jpg',
-      bio: 'Emma manages financial operations and develops innovative trade financing solutions for our global client base.'
-    }
   ];
 
   const values = [
@@ -68,6 +43,48 @@ const AboutUs = () => {
       title: 'Sustainability', 
       description: 'We are committed to environmentally responsible practices throughout our global supply chain.' 
     }
+  ];
+
+  const solutions = [
+    { icon: <Wheat className="h-6 w-6" />, title: "Grains", description: "Expert trading of wheat, corn, barley, and other grains globally.", link: "/grains", active: true },
+    { icon: <Utensils className="h-6 w-6" />, title: "Food Ingredients", description: "Quality ingredients sourced directly from producers.", link: "/grains", active: false },
+    { icon: <PawPrint className="h-6 w-6" />, title: "Animal Feed Ingredients", description: "Nutritional ingredients for livestock and poultry.", link: "/grains", active: false },
+    { icon: <Utensils className="h-6 w-6" />, title: "Pet Food Ingredients", description: "Premium ingredients for pet food manufacturers.", link: "/grains", active: false },
+    { icon: <Globe className="h-6 w-6" />, title: "International Trade", description: "Global market access and trade financing solutions.", link: "/international-trade", active: false },
+    { icon: <Truck className="h-6 w-6" />, title: "Transportation", description: "Efficient logistics and transportation services.", link: "/international-trade", active: false },
+  ];
+
+  const services = [
+    { 
+      icon: <Check className="h-6 w-6" />, 
+      title: 'Local merchants with authority', 
+      description: "You'll work directly with a merchant in your area who understands your product, knows the global market and has the authority to make decisions quickly."
+    },
+    { 
+      icon: <Check className="h-6 w-6" />, 
+      title: 'Efficient payment', 
+      description: "We offer streamlined technology solutions to make sure you get paid on time and according to our agreements."
+    },
+    { 
+      icon: <Check className="h-6 w-6" />, 
+      title: 'Fast dumping', 
+      description: "Our facilities are designed for efficiency. No lines. No waiting around. We dump grain fast and get back on the road."
+    },
+    { 
+      icon: <Calendar className="h-6 w-6" />, 
+      title: 'Year-round markets', 
+      description: "We're in the market 24/7/365. We know what buyers are looking for, and we aim to provide them a consistent supply."
+    },
+    { 
+      icon: <Check className="h-6 w-6" />, 
+      title: 'Pricing options', 
+      description: "We offer flexible alternatives to pricing beyond just a straight cash price. Let us know what you're looking for, and we'll work to create a solution just for you."
+    },
+    { 
+      icon: <Check className="h-6 w-6" />, 
+      title: 'Storage capabilities', 
+      description: "We invest in your local communities and facilities to ensure that we have the most secure, top-of-the-line storage solutions available to you."
+    },
   ];
 
   return (
@@ -209,45 +226,87 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Leadership Team */}
+        {/* Supply Chain Solutions Section - Based on the provided screenshot */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-              <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
-              <p className="text-gray-700">
-                Meet the experienced professionals who guide our global operations and strategic direction.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <div 
-                  key={member.name}
-                  className="bg-white rounded-lg shadow-md overflow-hidden group animate-fade-in" 
-                  style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img 
-                      src={member.photo} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/2 overflow-hidden rounded-full">
+                <img 
+                  src="public/lovable-uploads/0f7219d5-9d3d-4e55-9cda-ea9f6e935f27.png" 
+                  alt="Grain pouring from truck" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              <div className="md:w-1/2">
+                <h3 className="text-gray-600 font-semibold mb-2 uppercase tracking-wider">WHAT WE DO</h3>
+                <h2 className="text-3xl font-bold text-impexpo-darkblue mb-6">Our agricultural supply chain solutions explore what's possible across key industries</h2>
+                
+                <div className="space-y-4 mb-8">
+                  {solutions.map((solution, index) => (
+                    <ServiceCard 
+                      key={solution.title}
+                      title={solution.title}
+                      description={solution.description}
+                      icon={solution.icon}
+                      link={solution.link}
+                      delay={`${0.1 * (index + 1)}s`}
+                      active={solution.active}
                     />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-impexpo-gold mb-4">{member.position}</p>
-                    <p className="text-gray-700 text-sm">
-                      {member.bio}
-                    </p>
-                  </div>
+                  ))}
                 </div>
-              ))}
+                
+                <Link 
+                  to="/grains" 
+                  className="inline-flex items-center px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-colors"
+                >
+                  SEE ALL SOLUTIONS <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Strategic Partner Section - Based on the second screenshot */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold text-impexpo-darkblue mb-6">Your strategic marketplace partner</h2>
+                <p className="text-gray-700 mb-8">
+                  Our local merchandisers are deeply knowledgeable about supply and demand, crop conditions and market movement—so you can always turn to us for the information you need to grow your business. Since your crops are the most essential part of the global agricultural supply chain, we do whatever we can to secure a market quickly, facilitate connections and find the answers you need. Our reputation is one of reliability and stability.
+                </p>
+                
+                <div className="uppercase font-bold text-gray-800 mb-6">COUNT ON IMPEXPO FOR:</div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {services.map((service, index) => (
+                    <div key={service.title} className="flex gap-4 animate-fade-in" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+                      <div className="bg-impexpo-gold text-white p-4 rounded-full h-16 w-16 flex items-center justify-center shrink-0">
+                        {service.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-bold mb-2">{service.title}</h3>
+                        <p className="text-gray-600 text-sm">{service.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="md:w-1/2">
+                <img 
+                  src="public/lovable-uploads/9cb75a1a-f88d-477f-8fc1-3d1d33611fff.png" 
+                  alt="Farmers in field discussing crops" 
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Timeline */}
-        <section className="py-16">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
               <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
