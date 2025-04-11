@@ -12,16 +12,6 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const milestones = [
-    { year: 2005, title: 'Company Founded', description: 'Impexpo Group was established in Melbourne, Australia.' },
-    { year: 2008, title: 'First International Office', description: 'Opened our first international office in Singapore to better serve Asian markets.' },
-    { year: 2012, title: 'Expansion to Sydney', description: 'Established our second Australian office to expand domestic operations.' },
-    { year: 2015, title: 'International Trade Volume Milestone', description: 'Reached 100,000 MT annual international grain trade volume.' },
-    { year: 2017, title: 'Digital Trading Platform', description: 'Launched our digital grain trading platform, enhancing accessibility for clients.' },
-    { year: 2020, title: 'Sustainability Initiative', description: 'Implemented comprehensive sustainability framework across all operations.' },
-    { year: 2023, title: 'Global Network Milestone', description: 'Expanded our trading network to over 30 countries worldwide.' }
-  ];
-
   const values = [
     { 
       icon: <Scale className="h-8 w-8" />, 
@@ -91,15 +81,15 @@ const AboutUs = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Updated with agricultural field image */}
         <Hero 
           title="About Impexpo Group" 
           subtitle="Our story, mission, and the values that guide our global grain trading operations."
           size="md"
-          backgroundImage="https://images.unsplash.com/photo-1531256456869-ce942a665e80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+          backgroundImage="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
         />
 
-        {/* Company Overview */}
+        {/* Company Overview - Updated with agricultural images */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -145,23 +135,23 @@ const AboutUs = () => {
 
               <div className="grid grid-cols-2 gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1566345984367-8daab4d736ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Office Building" 
+                  src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Agricultural Silo" 
                   className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-all duration-300"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1604848698030-c434ba08ece1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Team Meeting" 
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Grain Harvest" 
                   className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-all duration-300"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1611465577672-8b79c95a2853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="https://images.unsplash.com/photo-1631233859262-0d7b12ef7035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Agricultural Field" 
+                  className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-all duration-300"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                   alt="Grain Inspection" 
-                  className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-all duration-300"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1517502474097-f9b30659dadb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="International Office" 
                   className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-all duration-300"
                 />
               </div>
@@ -226,68 +216,64 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Supply Chain Solutions Section - Based on the provided screenshot */}
-        <section className="py-16 bg-gray-50">
+        {/* What We Do - Compact Solution Section */}
+        <section className="py-10 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/2 overflow-hidden rounded-full">
-                <img 
-                  src="public/lovable-uploads/0f7219d5-9d3d-4e55-9cda-ea9f6e935f27.png" 
-                  alt="Grain pouring from truck" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              
-              <div className="md:w-1/2">
-                <h3 className="text-gray-600 font-semibold mb-2 uppercase tracking-wider">WHAT WE DO</h3>
-                <h2 className="text-3xl font-bold text-impexpo-darkblue mb-6">Our agricultural supply chain solutions explore what's possible across key industries</h2>
-                
-                <div className="space-y-4 mb-8">
-                  {solutions.map((solution, index) => (
-                    <ServiceCard 
-                      key={solution.title}
-                      title={solution.title}
-                      description={solution.description}
-                      icon={solution.icon}
-                      link={solution.link}
-                      delay={`${0.1 * (index + 1)}s`}
-                      active={solution.active}
-                    />
-                  ))}
-                </div>
-                
+            <div className="text-center mb-8">
+              <h3 className="text-gray-600 font-semibold mb-2 uppercase tracking-wider">WHAT WE DO</h3>
+              <h2 className="text-2xl font-bold text-impexpo-darkblue">Our Agricultural Supply Chain Solutions</h2>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {solutions.map((solution, index) => (
                 <Link 
-                  to="/grains" 
-                  className="inline-flex items-center px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-colors"
+                  key={solution.title}
+                  to={solution.link}
+                  className={`p-4 rounded-lg ${solution.active ? 'bg-red-500 text-white' : 'bg-white hover:bg-impexpo-gold/10'} 
+                  flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg animate-fade-in`}
+                  style={{ animationDelay: `${0.1 * (index + 1)}s` }}
                 >
-                  SEE ALL SOLUTIONS <ArrowRight className="ml-2 h-5 w-5" />
+                  <div className={`p-3 rounded-full ${solution.active ? 'bg-white text-red-500' : 'bg-impexpo-gold/10 text-impexpo-gold'} mb-3`}>
+                    {solution.icon}
+                  </div>
+                  <h3 className={`font-bold mb-1 ${solution.active ? 'text-white' : 'text-impexpo-darkblue'}`}>{solution.title}</h3>
+                  <p className={`text-xs ${solution.active ? 'text-white/80' : 'text-gray-600'}`}>{solution.description}</p>
                 </Link>
-              </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-6">
+              <Link 
+                to="/grains" 
+                className="inline-flex items-center px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded-full transition-colors text-sm"
+              >
+                SEE ALL SOLUTIONS <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Strategic Partner Section - Based on the second screenshot */}
-        <section className="py-16">
+        {/* Strategic Partner Section - Updated with farmer image and reduced height */}
+        <section className="py-10">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-impexpo-darkblue mb-6">Your strategic marketplace partner</h2>
-                <p className="text-gray-700 mb-8">
-                  Our local merchandisers are deeply knowledgeable about supply and demand, crop conditions and market movement—so you can always turn to us for the information you need to grow your business. Since your crops are the most essential part of the global agricultural supply chain, we do whatever we can to secure a market quickly, facilitate connections and find the answers you need. Our reputation is one of reliability and stability.
+                <h2 className="text-2xl font-bold text-impexpo-darkblue mb-4">Your strategic marketplace partner</h2>
+                <p className="text-gray-700 mb-6 text-sm">
+                  Our local merchandisers are deeply knowledgeable about supply and demand, crop conditions and market movement—so you can always turn to us for the information you need to grow your business. We do whatever we can to secure a market quickly, facilitate connections and find the answers you need.
                 </p>
                 
-                <div className="uppercase font-bold text-gray-800 mb-6">COUNT ON IMPEXPO FOR:</div>
+                <div className="uppercase font-bold text-gray-800 mb-4 text-sm">COUNT ON IMPEXPO FOR:</div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {services.map((service, index) => (
-                    <div key={service.title} className="flex gap-4 animate-fade-in" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
-                      <div className="bg-impexpo-gold text-white p-4 rounded-full h-16 w-16 flex items-center justify-center shrink-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {services.slice(0, 4).map((service, index) => (
+                    <div key={service.title} className="flex gap-3 animate-fade-in" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+                      <div className="bg-impexpo-gold text-white p-2 rounded-full h-10 w-10 flex items-center justify-center shrink-0">
                         {service.icon}
                       </div>
                       <div>
-                        <h3 className="font-bold mb-2">{service.title}</h3>
-                        <p className="text-gray-600 text-sm">{service.description}</p>
+                        <h3 className="font-bold text-sm mb-1">{service.title}</h3>
+                        <p className="text-gray-600 text-xs">{service.description}</p>
                       </div>
                     </div>
                   ))}
@@ -296,53 +282,19 @@ const AboutUs = () => {
               
               <div className="md:w-1/2">
                 <img 
-                  src="public/lovable-uploads/9cb75a1a-f88d-477f-8fc1-3d1d33611fff.png" 
+                  src="https://images.unsplash.com/photo-1591329975828-9e1baf7dbf36?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Farmers in field discussing crops" 
-                  className="w-full rounded-lg shadow-lg"
+                  className="w-full rounded-lg shadow-lg h-80 object-cover"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-              <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
-              <p className="text-gray-700">
-                Explore the key milestones that have shaped Impexpo Group's growth over the years.
-              </p>
-            </div>
-
-            <div className="relative">
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
-              
-              <div className="space-y-16">
-                {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className={`relative flex items-center justify-between md:justify-normal animate-fade-in ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-impexpo-gold border-4 border-white shadow"></div>
-                    
-                    <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-10' : 'md:pl-10'}`}>
-                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                        <span className="text-impexpo-gold font-bold">{milestone.year}</span>
-                        <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
-                        <p className="text-gray-700">{milestone.description}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="hidden md:block w-5/12"></div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* Join Us CTA */}
-        <section className="py-16 bg-impexpo-darkblue text-white">
+        <section className="py-12 bg-impexpo-darkblue text-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="animate-fade-in">
                 <h2 className="text-3xl font-bold mb-6">Join Our Global Network</h2>
                 <p className="text-gray-200 mb-8">

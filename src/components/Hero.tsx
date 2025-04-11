@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({
   subtitle,
   buttonText = 'Learn More',
   buttonLink = '/',
-  backgroundImage = '/src/assets/hero-bg.jpg',
+  backgroundImage = 'https://images.unsplash.com/photo-1472152083436-a6eede6efad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
   size = 'md',
 }) => {
   const getHeroHeight = () => {
@@ -38,6 +38,8 @@ const Hero: React.FC<HeroProps> = ({
       className={`hero-section ${getHeroHeight()} flex items-center justify-center`}
       style={{
         backgroundImage: `linear-gradient(rgba(28, 62, 90, 0.7), rgba(28, 62, 90, 0.7)), url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       <div className="container mx-auto px-4 text-center">
